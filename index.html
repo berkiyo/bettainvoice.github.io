@@ -12,6 +12,8 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap"
       rel="stylesheet" />
+    <link rel="icon" type="image/png" href="images/app-icon.png" />
+    <link rel="apple-touch-icon" href="images/app-icon.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -31,15 +33,25 @@
           <span>BettaInvoice</span>
         </div>
         <nav class="nav">
+          <a href="#screenshots">Screenshots</a>
           <a href="#features">Features</a>
           <a href="#pricing">Plans</a>
           <a href="#workflows">Why</a>
           <a href="#faq">FAQ</a>
         </nav>
         <div class="header-actions">
-          <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
-            <span class="toggle-indicator"></span>
-            <span class="toggle-label">Dark</span>
+          <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme">
+            <span class="toggle-icon toggle-sun" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" focusable="false">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"></path>
+              </svg>
+            </span>
+            <span class="toggle-icon toggle-moon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" focusable="false">
+                <path d="M20.5 14.2a8.5 8.5 0 1 1-10.7-10.7A7 7 0 0 0 20.5 14.2z"></path>
+              </svg>
+            </span>
           </button>
           <a class="cta primary" href="https://apps.apple.com/us/app/invoice-maker-easy-invoicing/id6757252423" target="_blank" rel="noreferrer">
             Get the app
@@ -121,10 +133,50 @@
                   <div class="pill">Aquila House</div>
                 </div>
               </div>
-              <div class="device-card placeholder">
-                <img src="images/app-icon.png" alt="BettaInvoice app icon" />
-                <span>App screenshots coming soon</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="screenshots" class="section">
+        <div class="container">
+          <div class="section-title">
+            <p class="eyebrow">Screenshots</p>
+            <h2>See BettaInvoice in action.</h2>
+          </div>
+          <div class="screenshots-panel">
+            <div class="screenshots-controls">
+              <p class="screenshots-page" data-shot-page aria-live="polite">Page 1 of 2</p>
+              <div class="screenshots-buttons">
+                <button class="pager-btn" type="button" data-shot-prev aria-label="Show previous screenshots">Previous</button>
+                <button class="pager-btn" type="button" data-shot-next aria-label="Show next screenshots">Next</button>
               </div>
+            </div>
+            <div class="screenshots-grid">
+              <figure class="screenshot-card">
+                <img src="images/bettainvoice-app-screenshot-iphone-01.png" alt="BettaInvoice app screenshot 01" loading="lazy" />
+              </figure>
+              <figure class="screenshot-card">
+                <img src="images/bettainvoice-app-screenshot-iphone-02.png" alt="BettaInvoice app screenshot 02" loading="lazy" />
+              </figure>
+              <figure class="screenshot-card">
+                <img src="images/bettainvoice-app-screenshot-iphone-03.png" alt="BettaInvoice app screenshot 03" loading="lazy" />
+              </figure>
+              <figure class="screenshot-card">
+                <img src="images/bettainvoice-app-screenshot-iphone-04.png" alt="BettaInvoice app screenshot 04" loading="lazy" />
+              </figure>
+              <figure class="screenshot-card">
+                <img src="images/bettainvoice-app-screenshot-iphone-05.png" alt="BettaInvoice app screenshot 05" loading="lazy" />
+              </figure>
+              <figure class="screenshot-card">
+                <img src="images/bettainvoice-app-screenshot-iphone-06.png" alt="BettaInvoice app screenshot 06" loading="lazy" />
+              </figure>
+              <figure class="screenshot-card">
+                <img src="images/bettainvoice-app-screenshot-iphone-07.png" alt="BettaInvoice app screenshot 07" loading="lazy" />
+              </figure>
+              <figure class="screenshot-card">
+                <img src="images/bettainvoice-app-screenshot-iphone-08.png" alt="BettaInvoice app screenshot 08" loading="lazy" />
+              </figure>
             </div>
           </div>
         </div>
@@ -335,6 +387,13 @@
         </div>
       </section>
     </main>
+
+    <div class="screenshot-lightbox" data-lightbox hidden>
+      <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Screenshot preview">
+        <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close screenshot preview">Close</button>
+        <img class="lightbox-image" data-lightbox-image src="" alt="" />
+      </div>
+    </div>
 
     <footer class="site-footer">
       <div class="container footer-grid">
